@@ -1,4 +1,12 @@
 package com.xsy.rpc.common.exception;
 
-public class RpcException {
+import com.xsy.rpc.common.enumeration.RpcError;
+
+public class RpcException extends Throwable {
+
+    RpcError rpcError;
+
+    public RpcException(RpcError serviceNotFound) {
+        rpcError = serviceNotFound;
+    }
 }
